@@ -1,256 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anniversaires enfants – Royal Kids Montgermont</title>
-  <meta name="description" content="Réservez un anniversaire inoubliable à Royal Kids Montgermont : jeux illimités, gâteau, boissons, repas, animateur et parade avec Léon. Créneaux disponibles en ligne." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🎉</text></svg>">
-  <meta property="og:title" content="Anniversaires enfants – Royal Kids Montgermont" />
-  <meta property="og:description" content="Formules tout compris, réservation en 1 minute. Happy Snack & Royale avec repas, animateur, parade de Léon." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#ff7a00" />
+  <meta name="description" content="Jeux géants, gâteau, boissons, repas, animateur et parade avec Léon. Réservez l'anniversaire parfait à Royal Kids Montgermont en 1 minute." />
+  <link rel="canonical" href="https://www.anniversaire-rk.fr/">
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://royalkids-montgermont.qweekle.com" crossorigin>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Anniversaires enfants – Royal Kids Montgermont">
+  <meta property="og:description" content="Formules tout compris : gâteau, boissons, repas, animateur, parade de Léon. Réservation en ligne.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.anniversaire-rk.fr/">
+  <meta property="og:image" content="https://www.anniversaire-rk.fr/toboggan.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anniversaires enfants – Royal Kids Montgermont">
+  <meta name="twitter:description" content="Jeux géants, gâteau, boissons, repas, animateur et parade avec Léon. Réserve en 1 minute.">
+  <meta name="twitter:image" content="https://www.anniversaire-rk.fr/toboggan.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --orange:#ff7a00; --yellow:#ffd166; --deep:#ff4b2b; --green:#24b36b; --violet:#7b61ff;
-      --ink:#13222b; --muted:#51606a;
+      --bg1:#FF8A00; --bg2:#FFB347;
+      --ink:#1b1f23; --muted:#5e6066;
+      --ok:#14a44d; --blue:#1a73e8;
+      --card:#fff; --shadow:0 12px 30px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --r:18px; --r-lg:22px;
     }
     *{box-sizing:border-box}
+    html,body{margin:0}
     body{
-      margin:0;font-family:Arial, Helvetica, sans-serif;color:var(--ink);
-      background: linear-gradient(180deg, #ff7a00 0%, #ff9a36 30%, #ffb74d 60%, #ffd166 100%) fixed;
-      line-height:1.6; padding-bottom:96px
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      min-height:100dvh;
+      padding-bottom:92px;
     }
-    header{text-align:center;padding:18px 16px}
-    header img{max-width:340px;width:100%;height:auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.15))}
-    .wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px}
 
-    /* Bandeau "Réservations en cours" */
-    .loadingbar{
-      display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#0f7a3a;
-      padding:10px 12px;font-weight:800;position:sticky;top:0;z-index:30;box-shadow:0 6px 14px rgba(0,0,0,.12)
+    /* Ticker */
+    .loadingbar{position:sticky;top:0;z-index:50;display:flex;justify-content:center}
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      background:#fff;color:#0b7d3b;border-radius:999px;padding:10px 16px;
+      font-weight:800;box-shadow:var(--shadow);margin-top:10px
     }
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:bounce 1.2s infinite ease-in-out}
-    .dot:nth-child(1){animation-delay:0s}.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
-    @keyframes bounce{0%,80%,100%{transform:scale(0)}40%{transform:scale(1)}}
+    .dots{display:inline-flex;gap:4px}
+    .dots i{width:6px;height:6px;border-radius:50%;background:#0b7d3b;opacity:.35;animation:blink 1.4s infinite}
+    .dots i:nth-child(2){animation-delay:.15s}
+    .dots i:nth-child(3){animation-delay:.3s}
+    @keyframes blink{50%{opacity:1}}
 
-    /* HERO */
-    .hero{background:#ffffffcc;backdrop-filter: blur(2px);border-radius:18px;padding:18px;margin-top:12px;box-shadow:0 8px 20px rgba(0,0,0,.12);text-align:center}
-    h1{margin:6px 0 6px;font-size:30px;color:#0f7a3a}
-    .subbrand{display:block;font-size:18px;color:#0f7a3a;font-weight:800;margin-top:4px}
-    .lead{max-width:900px;margin:0 auto}
-    .cta{display:inline-block;margin:16px auto 6px;padding:14px 22px;background:var(--green);color:#fff;border-radius:28px;text-decoration:none;font-weight:800;box-shadow:0 8px 20px rgba(45,190,108,.28)}
-    .cta.secondary{background:var(--violet)}
+    header{text-align:center;color:#fff;margin-top:6px}
+    header img{max-width:360px;width:90%;height:auto;filter:drop-shadow(0 6px 12px rgba(0,0,0,.2))}
+    .hero{background:#ffffffcc;border-radius:18px;padding:18px;box-shadow:var(--shadow);margin-top:14px}
+    h1{margin:6px 0 6px;font-size:clamp(26px,4vw,40px);color:#0b7d3b}
+    .subbrand{display:block;font-weight:800;color:#0b7d3b;margin-top:4px}
+    .lead{margin:6px auto 0;max-width:860px}
     .center{text-align:center}
+    .btn{display:inline-block;background:var(--ok);color:#fff;text-decoration:none;font-weight:800;padding:10px 16px;border-radius:12px;box-shadow:var(--shadow)}
+    .btn.alt{background:var(--blue)}
 
-    /* Shorts video (9/16) responsive */
-    .shorts{position:relative;width:100%;max-width:420px;margin:18px auto;border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.22);background:#000}
+    /* Video (9/16) */
+    .shorts{position:relative;width:100%;max-width:420px;margin:16px auto;border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.22);background:#000}
     .shorts::before{content:"";display:block;padding-top:177.78%}
     .shorts iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
     /* Mascotte */
-    .mascot{max-width:240px;width:60%;display:block;margin:22px auto 10px}
+    .mascot{max-width:240px;width:60%;display:block;margin:18px auto 6px}
 
-    /* PHOTOS (désormais AU-DESSUS des formules) */
-    .gallery{margin:10px auto 0;display:grid;gap:14px}
-    @media(min-width:860px){.gallery{grid-template-columns:repeat(3,1fr)}}
-    .photo{border-radius:16px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.18);background:#fff}
+    /* Gallery ABOVE plans */
+    .gallery{display:grid;gap:16px;margin:10px 0 6px}
+    @media(min-width:900px){.gallery{grid-template-columns:repeat(3,1fr)}}
+    .photo{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
     .photo img{display:block;width:100%;height:220px;object-fit:cover}
-    .caption{padding:10px;font-weight:700;color:#0f7a3a;font-size:14px}
+    .caption{padding:10px;font-weight:800;color:#0b7d3b}
 
-    /* PLANS */
-    h2{color:#3a2f2f;margin:24px 0 8px;text-align:center}
-    .sub{font-size:14px;color:#24323a;text-align:center;margin:0 0 10px}
-    .cards{display:grid;gap:16px;margin-top:12px}
-    @media(min-width:860px){.cards{grid-template-columns:repeat(3,1fr)}}
-    .card{background:#fff;border-radius:18px;padding:16px;box-shadow:0 12px 30px rgba(0,0,0,.12);display:flex;flex-direction:column;position:relative;overflow:hidden}
-    .card h3{margin:6px 0 0}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#fff8;backdrop-filter:blur(3px);margin:6px 0}
-    .price{color:#0f7a3a;font-weight:900;margin-top:6px;font-size:22px}
-    .per{font-size:12px;color:#57636b;margin-left:6px}
-    .card ul{padding-left:18px;margin:12px 0 0}
-    .card li{margin:6px 0}
-    .btn{display:inline-block;padding:10px 14px;border-radius:24px;background:var(--violet);color:#fff;text-decoration:none;font-weight:700}
+    /* Plans */
+    .section-title{color:#fff;text-align:center;margin:14px 0 6px}
+    .plans{display:grid;gap:18px;margin-top:10px}
+    @media(min-width:900px){.plans{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:18px;position:relative;display:flex;flex-direction:column;overflow:hidden}
+    .card h3{margin:0 0 6px}
+    .pill-mini{display:inline-block;background:#eef7f1;color:#0b7d3b;padding:6px 10px;border-radius:999px;font-weight:800}
+    .price{margin:8px 0 10px;font-weight:900;color:#0e8c2d;font-size:22px}
+    .price .per{font-size:12px;color:#4f5b66;margin-left:6px}
+    ul.feats{margin:10px 0 14px;padding-left:18px}
+    ul.feats li{margin:6px 0}
     .card .btn{margin-top:auto;align-self:flex-start}
 
-    /* Badge PNG dans la carte Royale (≈2 cm ≃ 80px) */
-    .badge-img{
-      position:absolute;top:-10px;right:-10px;width:80px;height:auto;
-      filter:drop-shadow(0 6px 10px rgba(0,0,0,.25));z-index:5
-    }
+    /* Badge Royale 2cm */
+    .badge-img{position:absolute;top:-10px;right:-10px;width:80px;height:auto;filter:drop-shadow(0 6px 12px rgba(0,0,0,.25));pointer-events:none;z-index:5}
 
-    /* Testimonials */
+    /* CTA global sous cartes */
+    .under-cta{display:flex;justify-content:center;margin:10px 0 4px}
+
+    /* Testimonials + FAQ */
     .testi{display:grid;gap:14px;margin-top:18px}
-    @media(min-width:860px){.testi{grid-template-columns:repeat(3,1fr)}}
-    .quote{background:#ffffff;border-radius:14px;padding:12px 14px;box-shadow:0 10px 24px rgba(0,0,0,.12);border:1px solid #f3f3f3}
-    .stars{color:#ffb703;font-size:18px;letter-spacing:1px}
-    .who{color:#0a66c2;font-weight:700}
-    .when{color:var(--muted);font-size:12px}
-
-    /* FAQ */
+    @media(min-width:900px){.testi{grid-template-columns:repeat(3,1fr)}}
+    .quote{background:#fff;border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+    .stars{color:#ffb703;font-weight:900}
     .faq{list-style:none;padding:0;margin:16px 0;display:grid;gap:12px}
-    .faq li{background:#ffffff;border-radius:12px;padding:12px 14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-    .faq strong{color:#0f7a3a}
+    .faq li{background:#ffffff;border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
 
-    /* Barre d’action bas */
-    .bottombar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:2px solid #eee;display:flex;gap:12px;padding:10px 14px;justify-content:center;box-shadow:0 -6px 18px rgba(0,0,0,.2);z-index:50}
-    .btn-primary{background:var(--green)}
-    .btn-wa{background:#25D366}
-    footer{background:#1f2428;color:#fff;text-align:center;padding:14px;margin-top:24px}
-    a.link{color:#0a66c2}
+    footer{text-align:center;color:#fff;margin:22px 0 90px;opacity:.9}
+
+    /* Dock actions (optionnel) */
+    .dock{position:fixed;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:10px;z-index:60}
+    .dock .btn{box-shadow:0 10px 24px rgba(0,0,0,.2)}
   </style>
 </head>
 <body>
-  <!-- Bandeau haut -->
+
+  <!-- Bandeau -->
   <div class="loadingbar" aria-live="polite">
-    <span>Réservations en cours</span><span id="dots">…</span>
-    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="pill">
+      Réservations en cours <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
   </div>
 
-  <!-- HEADER -->
-  <header>
-    <img src="./LOGO-RK-AVEC-MONTGERMONT-BLANC-montgermont-25.08.19.PNG" alt="Royal Kids Montgermont">
+  <!-- Header -->
+  <header class="wrap">
+    <img src="./LOGO-RK-AVEC-MONTGERMONT-BLANC-montgermont-25.08.19.PNG" alt="Royal Kids Montgermont" width="360" height="120" loading="lazy" decoding="async">
   </header>
 
   <main class="wrap">
+
     <!-- HERO -->
     <section class="hero">
-      <h1>Offrez-lui un anniversaire inoubliable 🎉<br><span class="subbrand">Royal Kids Montgermont</span></h1>
-
-      <div style="display:flex;justify-content:center;margin-top:10px;">
-        <div style="background:#fff;color:#000;padding:6px 16px;border-radius:50px;font-weight:bold;box-shadow:0 2px 6px rgba(0,0,0,.15);display:flex;align-items:center;font-size:.95rem;">
-          Réservations en cours
-          <span style="display:inline-block;margin-left:4px;animation:dots 1.5s steps(4,end) infinite;">...</span>
-        </div>
-      </div>
-      <style>
-        @keyframes dots{
-          0%,20%{color:rgba(0,0,0,0);text-shadow:.25em 0 0 transparent,.5em 0 0 transparent}
-          40%{color:black;text-shadow:.25em 0 0 transparent,.5em 0 0 transparent}
-          60%{text-shadow:.25em 0 0 black,.5em 0 0 transparent}
-          80%,100%{text-shadow:.25em 0 0 black,.5em 0 0 black}
-        }
-      </style>
-
+      <h1>Offrez-lui un anniversaire inoubliable 🎉 <span class="subbrand">Royal Kids Montgermont</span></h1>
       <p class="lead">Jeux géants, gâteau et boissons inclus — et selon la formule : <b>repas</b>, <b>animateur</b>, <b>parade avec Léon</b>. Réservez en 1 minute.</p>
-      <a class="cta" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=hero&utm_campaign=anniv" target="_blank" rel="noopener">📅 Voir les disponibilités</a>
+      <div class="center">
+        <a class="btn alt" data-track="cta" data-where="hero"
+           href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=hero&utm_campaign=anniv"
+           target="_blank" rel="noopener">📅 Voir les disponibilités</a>
+      </div>
     </section>
 
-    <!-- VIDEO -->
+    <!-- Video Shorts -->
     <div class="shorts" aria-label="Vidéo Royal Kids Montgermont">
-      <iframe src="https://www.youtube.com/embed/Q10c1QKRvHM?autoplay=1&mute=1&loop=1&playlist=Q10c1QKRvHM" title="Vidéo Royal Kids Montgermont" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="center">
-      <a class="cta secondary" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=postvideo&utm_campaign=anniv" target="_blank" rel="noopener">Réserver maintenant</a>
+      <iframe src="https://www.youtube.com/embed/Q10c1QKRvHM?autoplay=1&mute=1&loop=1&playlist=Q10c1QKRvHM"
+              title="Vidéo Royal Kids Montgermont"
+              allow="autoplay; encrypted-media" loading="lazy"></iframe>
     </div>
 
-    <img class="mascot" src="./RK-Mascotte1-Quadrie-HD+Contour-1.png" alt="Mascotte Royal Kids">
+    <img class="mascot" src="./RK-Mascotte1-Quadrie-HD+Contour-1.png" alt="Mascotte Léon" width="240" height="240" loading="lazy" decoding="async">
 
-    <!-- 📸 PHOTOS (placées AU-DESSUS des formules) -->
-    <section aria-label="Photos Royal Kids" class="gallery">
+    <!-- PHOTOS AU-DESSUS DES FORMULES -->
+    <section class="gallery" aria-label="Photos Royal Kids">
       <figure class="photo">
-        <img src="./toboggan.jpg" alt="Enfant sur toboggan">
+        <img src="./toboggan.jpg" alt="Enfant sur toboggan" width="1200" height="800" loading="lazy" decoding="async">
         <figcaption class="caption">Toboggan géant</figcaption>
       </figure>
       <figure class="photo">
-        <img src="./leon-enfants.jpg" alt="Parade avec Léon et enfants">
+        <img src="./leon-enfants.jpg" alt="Parade avec Léon" width="1200" height="800" loading="lazy" decoding="async">
         <figcaption class="caption">Parade avec Léon</figcaption>
       </figure>
       <figure class="photo">
-        <img src="./piscine-balles.jpg" alt="Piscine à balles Royal Kids">
+        <img src="./piscine-balles.jpg" alt="Piscine à balles" width="1200" height="800" loading="lazy" decoding="async">
         <figcaption class="caption">Piscine à balles</figcaption>
       </figure>
     </section>
 
-    <!-- 🧁 FORMULES -->
-    <h2>Nos formules</h2>
-    <p class="sub">Minimum 8 enfants · Chaussettes obligatoires</p>
+    <!-- FORMULES -->
+    <section class="section-title">
+      <h2>Nos formules</h2>
+      <p>Minimum 8 enfants · Chaussettes obligatoires</p>
+    </section>
 
-    <section class="cards" aria-label="Formules Anniversaire">
+    <section class="plans" id="plans">
       <!-- Classic -->
       <article class="card">
         <h3>Classic</h3>
-        <span class="pill">Durée 2h</span>
+        <span class="pill-mini">Durée 2h</span>
         <div class="price">14,90€ <span class="per">/ enfant</span></div>
-        <ul>
-          <li>Entrée <b>OFFERTE</b> à l’enfant fêté (hors formule)</li>
+        <ul class="feats">
+          <li>Entrée <b>offerte</b> à l’enfant fêté (hors formule)</li>
           <li>Accès illimité aux jeux (hors jetons moto)</li>
           <li>Cartons d’invitation</li>
           <li>Gâteau d’anniversaire</li>
           <li>Boissons (sirop, eau) + friandises</li>
           <li>Certificat d’anniversaire</li>
         </ul>
-        <a class="btn" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=card&utm_campaign=anniv_classic" target="_blank" rel="noopener">Réserver</a>
+        <a class="btn" data-track="cta" data-where="card_classic"
+           href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=card_classic&utm_campaign=anniv"
+           target="_blank" rel="noopener">Réserver</a>
       </article>
 
       <!-- Happy Snack -->
       <article class="card">
-        <h3>Happy Snack <span class="pill">Repas inclus</span></h3>
-        <span class="pill">Durée 3h</span>
+        <h3>Happy Snack <span class="pill-mini">Repas inclus</span></h3>
+        <span class="pill-mini" style="margin-top:6px">Durée 3h</span>
         <div class="price">17,90€ <span class="per">/ enfant</span></div>
-        <ul>
+        <ul class="feats">
           <li>Tous les avantages <b>Classic</b></li>
-          <li>+ Boissons (coca, oasis, sirop, eau)</li>
-          <li>+ <b>Repas d’anniversaire</b></li>
+          <li>Boissons (coca, oasis, sirop, eau)</li>
+          <li><b>Repas d’anniversaire</b></li>
         </ul>
-        <a class="btn" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=card&utm_campaign=anniv_happysnack" target="_blank" rel="noopener">Réserver</a>
+        <a class="btn" data-track="cta" data-where="card_happy"
+           href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=card_happy&utm_campaign=anniv"
+           target="_blank" rel="noopener">Réserver</a>
       </article>
 
       <!-- Royale -->
       <article class="card">
-        <!-- Badge PNG en haut-droite -->
-        <img class="badge-img" src="./badge.png" alt="Best Seller">
+        <!-- Badge PNG en haut-droite (≈2 cm) -->
+        <img class="badge-img" src="./badge.png" alt="Best Seller" width="80" height="80" decoding="async">
 
         <h3>Royale</h3>
-        <span class="pill">Durée 3h</span>
+        <span class="pill-mini">Durée 3h</span>
         <div class="price">24,90€ <span class="per">/ enfant</span></div>
-        <ul>
+        <ul class="feats">
           <li>Tous les avantages <b>Happy Snack</b></li>
-          <li>+ <b>Animateur</b> dédié & parade avec Léon</li>
-          <li>+ <b>Pochette surprise</b> pour chaque enfant</li>
+          <li><b>Animateur</b> dédié & parade avec Léon</li>
+          <li><b>Pochette surprise</b> pour chaque enfant</li>
           <li>+ <b>1 tour de moto</b> par enfant</li>
-          <li>+ <b>Photo de groupe OFFERTE</b> avec Léon</li>
+          <li><b>Photo de groupe OFFERTE</b> avec Léon</li>
         </ul>
-        <a class="btn" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=card&utm_campaign=anniv_royale" target="_blank" rel="noopener">Réserver</a>
+        <a class="btn" data-track="cta" data-where="card_royale"
+           href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=card_royale&utm_campaign=anniv"
+           target="_blank" rel="noopener">Réserver</a>
       </article>
     </section>
 
-    <!-- Bouton "Voir les disponibilités" SOUS les 3 cartes -->
-    <div class="center" style="margin:14px 0 6px;">
-      <a class="cta" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=below_cards&utm_campaign=anniv" target="_blank" rel="noopener">Voir les disponibilités</a>
+    <!-- CTA global sous cartes -->
+    <div class="under-cta">
+      <a class="btn alt" data-track="cta" data-where="below_cards"
+         href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=below_cards&utm_campaign=anniv"
+         target="_blank" rel="noopener">Voir les disponibilités</a>
     </div>
 
     <!-- Avis -->
-    <h2>Ils ont fêté chez nous 🎉</h2>
+    <h2 style="color:#fff;text-align:center;margin:18px 0 6px">Ils ont fêté chez nous 🎉</h2>
     <div class="testi">
       <div class="quote">
         <div class="stars">★★★★★</div>
-        “Formule Royale parfaite, l’animateur a géré de A à Z. Les enfants ont adoré la parade avec Léon !”
-        <div class="who">— Laura</div>
-        <div class="when">Avis Google • juin 2025</div>
+        “Formule Royale parfaite, l’animateur a géré de A à Z. Les enfants ont adoré la parade avec Léon !” — Laura
       </div>
       <div class="quote">
         <div class="stars">★★★★★</div>
-        “Très propre et sécurisé, gâteau excellent. Merci l’équipe !”
-        <div class="who">— Damien</div>
-        <div class="when">Avis Google • mai 2025</div>
+        “Très propre et sécurisé, gâteau excellent. Merci l’équipe !” — Damien
       </div>
       <div class="quote">
         <div class="stars">★★★★★</div>
-        “Happy Snack = zéro stress. Repas inclus et boissons à volonté, top.”
-        <div class="who">— Sabrina</div>
-        <div class="when">Avis Google • avril 2025</div>
+        “Happy Snack = zéro stress. Repas inclus et boissons à volonté, top.” — Sabrina
       </div>
     </div>
-    <p class="center" style="text-align:center;margin-top:10px">Voir davantage d’avis : <a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?tbm=lcl&q=Royal+Kids+Montgermont+Rennes+Avis#lkt=LocalPoiReviews">Avis Google récents</a></p>
 
     <!-- FAQ -->
-    <h2>❓ Foire aux questions</h2>
-    <ul class="faq">
-      <li><strong>Peut-on venir sans faire un anniversaire ?</strong><br/>Oui&nbsp;! Le parc est ouvert au public pour le <b>jeu libre</b> pendant nos horaires d’ouverture. Vous achetez simplement une entrée classique et les enfants profitent des jeux autant qu’ils veulent (hors jetons moto). Et si l’envie vous prend sur place, vous pouvez <b>réserver une formule</b> selon les disponibilités du jour.</li>
-      <li><strong>Faut-il apporter un gâteau ?</strong><br/>Non, il est inclus dans toutes nos formules.</li>
-      <li><strong>À partir de quel âge ?</strong><br/>Nos anniversaires sont adaptés dès 3 ans.</li>
-      <li><strong>Les chaussettes sont-elles obligatoires ?</strong><br/>Oui, pour les enfants et les adultes.</li>
-      <li><strong>Peut-on ajouter des options ?</strong><br/>Oui : réalité virtuelle, pochettes surprises, photo de groupe, etc.</li>
-      <li><strong>Peut-on inviter des adultes supplémentaires ?</strong><br/>Oui, sur
+    <h2 style="color:#fff;text-align:center;margin:18px 0 6px">❓ Foire aux questions</h2>
+    <ul class="faq" id="faq">
+      <li>
+        <strong>Peut-on venir sans faire un anniversaire ?</strong><br>
+        Oui 👍 Le parc est ouvert au public pour le <b>jeu libre</b> pendant nos horaires d’ouverture.
+        Vous achetez simplement une entrée classique et les enfants profitent des jeux (hors jetons moto).
+        Et si l’envie vous prend sur place, vous pourrez <b>réserver une formule</b> selon les disponibilités du jour.
+      </li>
+      <li>
+        <strong>Combien d’adultes sont inclus&nbsp;?</strong><br>
+        <b>2 adultes accompagnateurs sont gratuits</b>. À partir du <b>3ᵉ adulte</b>, le tarif est de <b>2€ / adulte supplémentaire</b> —
+        <u>que ce soit pour les anniversaires ou pour l’entrée libre</u>.
+      </li>
+    </ul>
+
+  </main>
+
+  <footer class="wrap">© Royal Kids Montgermont • Anniversaires & loisirs pour enfants</footer>
+
+  <!-- Dock actions (optionnel) -->
+  <div class="dock" aria-label="Actions rapides">
+    <a class="btn" data-track="cta" data-where="dock_reserve"
+       href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=dock&utm_campaign=anniv"
+       target="_blank" rel="noopener">📅 Réserver</a>
+    <a class="btn alt" data-track="cta" data-where="dock_dispos"
+       href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires?lang=fr&utm_source=landing&utm_medium=dock_dispos&utm_campaign=anniv"
+       target="_blank" rel="noopener">Voir les disponibilités</a>
+  </div>
+
+  <!-- Tracking hooks (non bloquants) -->
+  <script>
+    document.addEventListener('click', (e)=>{
+      const a = e.target.closest('a[data-track]');
+      if(!a) return;
+      const where = a.getAttribute('data-where') || 'unknown';
+      console.log('[TRACK] CTA click ->', where, a.href);
+      // plus tard : fbq('trackCustom','CTA_Click',{where}); gtag('event','cta_click',{where});
+    });
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Peut-on venir sans faire un anniversaire ?",
+        "acceptedAnswer":{"@type":"Answer","text":"Oui ! Le parc est ouvert au public pendant nos horaires. Vous achetez une entrée classique et les enfants profitent des jeux (hors jetons moto). Sur place, vous pouvez passer en formule selon les disponibilités du jour."}
+      },
+      {
+        "@type":"Question",
+        "name":"Combien d’adultes sont inclus ?",
+        "acceptedAnswer":{"@type":"Answer","text":"2 adultes accompagnateurs sont gratuits. À partir du 3ᵉ adulte, le tarif est de 2€ par adulte supplémentaire — que ce soit pour les anniversaires ou pour l’entrée libre."}
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
