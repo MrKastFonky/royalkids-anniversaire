@@ -47,7 +47,7 @@ body{
 .hero .hero-box{
   width:100%;max-width:1100px;background:#ffe9d1;border-radius:20px;padding:24px 20px;
   box-shadow:0 8px 28px rgba(0,0,0,.10);
-  text-align:center; /* << centre tous les éléments */
+  text-align:center;
 }
 .hero h1{margin:6px 0 8px;font-size:clamp(26px,4vw,44px);line-height:1.15;color:#047857;font-weight:900}
 .hero p{margin:0 auto;max-width:880px;font-size:clamp(16px,2.2vw,20px)}
@@ -114,12 +114,15 @@ ul.features li{display:flex;gap:10px;margin:8px 0;line-height:1.35;color:#2a2a2a
 .grid-photos img{width:100%;height:220px;object-fit:cover;border-radius:16px;box-shadow:var(--shadow)}
 @media (max-width:980px){.grid-photos{grid-template-columns:1fr}}
 
-/* FAQ */
-.faq{background:#fff;border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow)}
-.faq h4{margin:0 0 10px;text-align:center;font-size:22px}
-.faq details{border:1px solid #ececec;border-radius:12px;padding:12px 14px;margin:10px 0}
-.faq summary{cursor:pointer;font-weight:900}
-.faq p{margin:10px 0 0;color:#2a2a2a}
+/* FAQ (nouvelle version en <ul>) */
+.faq-box{background:#fff;border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow);margin-top:10px}
+.faq-box h2{margin:0 0 12px;text-align:center}
+ul.faq{list-style:none;margin:0;padding:0}
+ul.faq li{
+  border:1px solid #ececec;border-radius:12px;padding:12px 14px;margin:10px 0;
+  line-height:1.45;
+}
+ul.faq b,strong{font-weight:800}
 footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9}
 </style>
 </head>
@@ -226,26 +229,49 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9}
   <!-- CTA “Voir les dispo” sous les 3 cartes -->
   <a id="dispos" class="btn secondary btn-wide" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires" target="_blank" rel="noopener">Voir les disponibilités</a>
 
-  <!-- Photos sous les formules (si tu veux inverser l’ordre, garde ce bloc après les cartes) -->
+  <!-- Photos sous les formules -->
   <section class="grid-photos" aria-label="Aperçu Royal Kids">
     <img src="toboggan.jpg" alt="Jeux géants" />
     <img src="leon-enfants.jpg" alt="Léon la mascotte" />
     <img src="piscine-balles.jpg" alt="Piscine à balles" />
   </section>
 
-  <!-- FAQ mise à jour -->
-  <section class="faq" id="faq">
-    <h4>❓ Foire aux questions</h4>
+  <!-- FAQ complète (ta liste + les 2 questions spécifiques) -->
+  <section class="faq-box" id="faq">
+    <h2>❓ Foire aux questions</h2>
+    <ul class="faq">
+      <li><strong>Peut-on venir sans faire un anniversaire ?</strong><br>
+        Oui 👍 Le parc est ouvert au public pour le <b>jeu libre</b> pendant nos horaires d’ouverture. Vous achetez simplement une entrée classique et les enfants profitent des jeux (hors jetons moto). Et si l’envie vous prend sur place, vous pourrez <b>réserver une formule</b> selon les disponibilités du jour.
+      </li>
 
-    <details open>
-      <summary>Peut-on venir sans faire un anniversaire ?</summary>
-      <p>Oui 👍 Le parc est ouvert au public pour le <b>jeu libre</b> pendant nos horaires d’ouverture. Vous achetez simplement une entrée classique et les enfants profitent des jeux (hors jetons moto). Et si l’envie vous prend sur place, vous pourrez <b>réserver une formule</b> selon les disponibilités du jour.</p>
-    </details>
+      <li><strong>Combien d’adultes sont inclus ?</strong><br>
+        <b>2 adultes accompagnateurs sont gratuits.</b> À partir du <b>3ᵉ adulte</b>, le tarif est de <b>2 € / adulte supplémentaire</b> — que ce soit pour les <b>anniversaires</b> ou pour l’<b>entrée libre</b>.
+      </li>
 
-    <details>
-      <summary>Combien d’adultes sont inclus ?</summary>
-      <p><b>2 adultes accompagnateurs sont gratuits.</b> À partir du <b>3ᵉ adulte</b>, le tarif est de <b>2 € / adulte supplémentaire</b> — <u>que ce soit pour les anniversaires ou pour l’entrée libre</u>.</p>
-    </details>
+      <li><strong>Faut-il apporter un gâteau ?</strong><br>
+        Non, il est inclus dans toutes nos formules.
+      </li>
+
+      <li><strong>À partir de quel âge ?</strong><br>
+        Nos anniversaires sont adaptés dès 3 ans.
+      </li>
+
+      <li><strong>Les chaussettes sont-elles obligatoires ?</strong><br>
+        Oui, pour les enfants et les adultes.
+      </li>
+
+      <li><strong>Peut-on ajouter des options ?</strong><br>
+        Oui : réalité virtuelle, pochettes surprises, photo de groupe, etc.
+      </li>
+
+      <li><strong>Peut-on inviter des adultes supplémentaires ?</strong><br>
+        Oui, sur toutes les formules. <b>Tarif : 2 € par adulte supplémentaire</b>.
+      </li>
+
+      <li><strong>Fournissez-vous des bonbons sans gélatine ?</strong><br>
+        Oui, sur simple demande lors de la réservation.
+      </li>
+    </ul>
   </section>
 </main>
 
