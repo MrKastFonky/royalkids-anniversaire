@@ -30,6 +30,10 @@ body{
 }
 .container{max-width:1100px;margin:0 auto;padding:24px}
 
+/* Header logo */
+.site-header{display:flex;justify-content:center;padding:10px 0 4px}
+.site-header .logo{height:58px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.12))}
+
 /* Ticker */
 .ticker{display:flex;justify-content:center;margin:10px 0 6px}
 .pill{
@@ -114,7 +118,19 @@ ul.features li{display:flex;gap:10px;margin:8px 0;line-height:1.35;color:#2a2a2a
 .grid-photos img{width:100%;height:220px;object-fit:cover;border-radius:16px;box-shadow:var(--shadow)}
 @media (max-width:980px){.grid-photos{grid-template-columns:1fr}}
 
-/* FAQ (nouvelle version en <ul>) */
+/* Avis clients */
+.reviews{color:#fff;margin:10px 0 6px}
+.reviews h2{margin:0 0 10px;text-align:center}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:980px){.reviews-grid{grid-template-columns:1fr}}
+.review{
+  background:#fff;border-radius:16px;padding:16px;box-shadow:var(--shadow);
+}
+.stars{color:#f59e0b;letter-spacing:2px;font-size:18px;margin-bottom:6px}
+.review .who{font-weight:800}
+.review .when{color:var(--ink-soft);font-size:12px;margin-top:2px}
+
+/* FAQ (version <ul>) */
 .faq-box{background:#fff;border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow);margin-top:10px}
 .faq-box h2{margin:0 0 12px;text-align:center}
 ul.faq{list-style:none;margin:0;padding:0}
@@ -127,6 +143,11 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9}
 </style>
 </head>
 <body>
+
+<!-- LOGO -->
+<div class="site-header">
+  <img class="logo" src="LOGO-RK-AVEC-MONTGERMONT-BLANC-montgermont-25.08.19.png" alt="Royal Kids Montgermont">
+</div>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -201,7 +222,6 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9}
 
     <!-- Royale -->
     <article class="card">
-      <!-- badge best seller en haut-droite -->
       <img class="best-badge" src="badge.png" alt="Best seller">
       <h3>Royale</h3>
       <p class="muted">Durée 3h</p>
@@ -229,14 +249,39 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9}
   <!-- CTA “Voir les dispo” sous les 3 cartes -->
   <a id="dispos" class="btn secondary btn-wide" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires" target="_blank" rel="noopener">Voir les disponibilités</a>
 
-  <!-- Photos sous les formules -->
+  <!-- Photos -->
   <section class="grid-photos" aria-label="Aperçu Royal Kids">
     <img src="toboggan.jpg" alt="Jeux géants" />
     <img src="leon-enfants.jpg" alt="Léon la mascotte" />
     <img src="piscine-balles.jpg" alt="Piscine à balles" />
   </section>
 
-  <!-- FAQ complète (ta liste + les 2 questions spécifiques) -->
+  <!-- Avis clients -->
+  <section class="reviews">
+    <h2>Ils ont fêté chez nous 🎉</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Formule Royale parfaite, l’animateur a géré de A à Z. Les enfants ont adoré la parade avec Léon !</p>
+        <div class="who">Laura</div>
+        <div class="when">Avis Google • juin 2025</div>
+      </article>
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Très propre et sécurisé, gâteau excellent. Merci l’équipe !</p>
+        <div class="who">Damien</div>
+        <div class="when">Avis Google • mai 2025</div>
+      </article>
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Organisation top, enfants ravis, on reviendra. Mention spéciale aux animateurs !</p>
+        <div class="who">Sophie</div>
+        <div class="when">Avis Google • avril 2025</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ complète -->
   <section class="faq-box" id="faq">
     <h2>❓ Foire aux questions</h2>
     <ul class="faq">
