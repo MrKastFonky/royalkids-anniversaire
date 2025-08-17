@@ -426,5 +426,30 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9} /* --- FAQ a
 <footer>
   © Royal Kids Montgermont • Anniversaires & loisirs pour enfants
 </footer>
+
+<script>
+  // Accordéon FAQ
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+      // Toggle l’item courant
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (expanded) {
+        answer.hidden = true;
+        item.classList.remove('active');
+      } else {
+        answer.hidden = false;
+        item.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
