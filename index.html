@@ -30,9 +30,24 @@ body{
 }
 .container{max-width:1100px;margin:0 auto;padding:24px}
 
-/* Header logo */
-.site-header{display:flex;justify-content:center;padding:10px 0 4px}
-.site-header .logo{height:58px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.12))}
+/* Header logo — FLUID */
+.site-header{
+  display:flex;justify-content:center;align-items:center;
+  padding:12px 0 6px;
+}
+.site-header .logo{
+  /* grandit/rétrécit selon la taille d’écran */
+  height: clamp(64px, 12vw, 180px);
+  width: auto;                 /* garde les proportions */
+  max-width: min(90vw, 720px); /* ne dépasse jamais l’écran */
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.12));
+}
+
+/* Option: un peu plus grand sur desktop large */
+@media (min-width: 1280px){
+  .site-header .logo{ height: clamp(80px, 10vw, 200px); }
+}
+
 
 /* Ticker */
 .ticker{display:flex;justify-content:center;margin:10px 0 6px}
