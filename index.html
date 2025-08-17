@@ -435,8 +435,8 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9} /* --- FAQ a
       const answer = item.querySelector('.faq-answer');
       const expanded = btn.getAttribute('aria-expanded') === 'true';
 
-      // Toggle l’item courant
       btn.setAttribute('aria-expanded', String(!expanded));
+
       if (expanded) {
         answer.hidden = true;
         item.classList.remove('active');
@@ -447,9 +447,6 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9} /* --- FAQ a
     });
   });
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
