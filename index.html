@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anniversaires Royal Kids Montgermont</title>
+<meta name="description" content="Anniversaire enfant à Royal Kids Montgermont : jeux géants, gâteau, boissons, animateur, parade et surprises !" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#FF8A00; --bg2:#FFB347;
+  --ink:#1c1c1c; --ink-soft:#5e5e5e;
+  --ok:#16a34a; --cta:#1a73e8;
+  --card:#fff; --shadow:0 10px 30px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --r:18px; --r-lg:24px;
+}
+
+/* base */
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(180deg,var(--bg1),var(--bg2));
+  min-height:100dvh;
+}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+
+/* Header logo — FLUID */
+.site-header{
+  display:flex;justify-content:center;align-items:center;
+  padding:12px 0 6px;
+}
+.site-header .logo{
+  /* grandit/rétrécit selon la taille d’écran */
+  height: clamp(64px, 12vw, 180px);
+  width: auto;                 /* garde les proportions */
+  max-width: min(90vw, 720px); /* ne dépasse jamais l’écran */
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.12));
+}
+
+/* Option: un peu plus grand sur desktop large */
+@media (min-width: 1280px){
+  .site-header .logo{ height: clamp(80px, 10vw, 200px); }
+}
+
+
+/* Ticker */
+.ticker{display:flex;justify-content:center;margin:10px 0 6px}
+.pill{
+  background:#fff;border-radius:999px;padding:8px 14px;font-weight:800;
+  box-shadow:var(--shadow);display:inline-flex;gap:10px;align-items:center
+}
+.dots{display:inline-flex;gap:4px}
+.dots i{width:6px;height:6px;border-radius:50%;background:#16a34a;opacity:.35;display:inline-block;animation:blink 1.4s infinite}
+.dots i:nth-child(2){animation-delay:.15s}
+.dots i:nth-child(3){animation-delay:.3s}
+@keyframes blink{50%{opacity:1}}
+
+/* HERO (centré) */
+.hero{display:flex;justify-content:center}
+.hero .hero-box{
+  width:100%;max-width:1100px;background:#ffe9d1;border-radius:20px;padding:24px 20px;
+  box-shadow:0 8px 28px rgba(0,0,0,.10);
+  text-align:center;
+}
+.hero h1{margin:6px 0 8px;font-size:clamp(26px,4vw,44px);line-height:1.15;color:#047857;font-weight:900}
+.hero p{margin:0 auto;max-width:880px;font-size:clamp(16px,2.2vw,20px)}
+.hero .cta-main{
+  margin:16px auto 0;display:inline-flex;align-items:center;gap:10px;
+  background:#1a73e8;color:#fff;border:none;border-radius:999px;padding:14px 18px;
+  font-weight:800;box-shadow:var(--shadow);cursor:pointer;text-decoration:none
+}
+
+/* Section titre */
+.section-title{text-align:center;color:#fff;margin:14px 0 8px}
+.section-title h2{margin:0 0 6px;font-size:clamp(22px,3.2vw,30px);font-weight:900}
+.section-title p{margin:0;opacity:.95}
+
+/* Plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:980px){.plans{grid-template-columns:1fr}}
+.card{
+  position:relative;background:#fff;border-radius:var(--r-lg);
+  box-shadow:var(--shadow);padding:20px 20px 18px
+}
+.card h3{margin:0 0 2px}
+.muted{color:var(--ink-soft);font-size:14px;margin:0 0 10px}
+
+/* Pastille prix style “doré” */
+.price-wrap{margin:10px 0 12px}
+.price-burst{
+  display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;
+  background:
+    radial-gradient(circle at -10% 120%, #fff8 0 55%, #0000 56%),
+    linear-gradient(135deg,#ffe08a,#fff2b5 40%,#fff 41% 59%,#fff2b5 60%,#ffd36c);
+  border:2px solid #f0c245; box-shadow:0 8px 18px rgba(0,0,0,.06), inset 0 -3px 8px rgba(0,0,0,.06)
+}
+.price-burst .amount{font-size:28px;line-height:1;color:#0e8c2d;font-weight:900;letter-spacing:.2px}
+.price-burst .per{font-weight:700;color:#0e8c2d;opacity:.9;font-size:14px}
+.price-burst .tag{
+  font-size:11px;font-weight:900;color:#fff;background:#16a34a;padding:6px 9px;border-radius:999px;
+  letter-spacing:.3px;text-transform:uppercase
+}
+
+/* liste */
+ul.features{list-style:none;margin:12px 0 14px;padding:0}
+ul.features li{display:flex;gap:10px;margin:8px 0;line-height:1.35;color:#2a2a2a}
+.dot{
+  width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;
+  background:#e9f7ef;color:var(--ok);font-size:12px;font-weight:900;flex:0 0 18px
+}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;
+  color:#fff;background:var(--ok);border:none;cursor:pointer;font-weight:800;text-decoration:none;box-shadow:var(--shadow)}
+.btn.secondary{background:var(--cta)}
+.btn-wide{display:block;text-align:center;width:100%;max-width:320px;margin:6px auto 0}
+
+/* Badge “best seller” */
+.best-badge{
+  position:absolute;top:-8px;right:-8px;z-index:2;
+  width:76px;height:76px; /* ~ 2 cm */
+  pointer-events:none;
+}
+
+/* Grille photos */
+.grid-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0}
+.grid-photos img{width:100%;height:220px;object-fit:cover;border-radius:16px;box-shadow:var(--shadow)}
+@media (max-width:980px){.grid-photos{grid-template-columns:1fr}}
+
+/* Avis clients */
+.reviews{margin:10px 0 6px}
+.reviews h2{margin:0 0 10px;text-align:center;color:#fff}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:980px){.reviews-grid{grid-template-columns:1fr}}
+.review{
+  background:#fff;border-radius:16px;padding:16px;box-shadow:var(--shadow);
+  color:var(--ink);
+}
+.stars{color:#f59e0b;letter-spacing:2px;font-size:18px;margin-bottom:6px}
+.review .who{font-weight:800}
+.review .when{color:var(--ink-soft);font-size:12px;margin-top:2px}
+
+/* FAQ – cartes en liste */
+.faq-box{background:#fff;border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow);margin-top:10px}
+.faq-box h2{margin:0 0 12px;text-align:center}
+ul.faq{list-style:none;margin:0;padding:0}
+ul.faq li{
+  border:1px solid #ececec;border-radius:12px;padding:12px 14px;margin:10px 0;
+  line-height:1.45; background:#fff;
+}
+ul.faq b,strong{font-weight:800}
+
+footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9} /* --- FAQ améliorée --- */
+.faq-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+  background: #f7f7f7;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #222;
+}
+
+.faq-answer {
+  padding: 14px 18px;
+  background: #fff;
+  display: none;
+  line-height: 1.5;
+  color: #444;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+/* ===== Mise en avant ROYALE + ordre ===== */
+
+/* on identifie chaque carte */
+.card--classic {}
+.card--royale {}
+.card--snack {}
+
+/* Ordre desktop: Classic (gauche) • Royale (centre) • Happy Snack (droite) */
+.plans {
+  align-items: stretch;
+}
+.card--classic { order: 1; }
+.card--royale  { order: 2; }
+.card--snack   { order: 3; }
+
+/* Royale mise en avant (≈ +6%) + bordure + ombre */
+.card--royale {
+  transform: scale(1.06);
+  transform-origin: center;
+  z-index: 2;
+  border: 2px solid #ffd36c; /* bordure légère dorée */
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.18),
+    0 6px 14px rgba(0,0,0,.10);
+}
+
+/* CTA différencié Royale */
+.card--royale .btn {
+  background: #1a73e8; /* bleu plus “primaire” */
+}
+.card--royale .btn:hover {
+  filter: brightness(1.05);
+}
+
+/* Mobile: 1 colonne et ROYALE en premier */
+@media (max-width: 980px) {
+  .plans { grid-template-columns: 1fr; }
+  .card--royale { order: -1; transform: none; } /* s’affiche en premier, sans scale */
+}
+
+/* Ajout espace entre les cartes */
+.card {
+  margin-bottom: 40px;
+}
+</style>
+</head>
+<body>
+
+  <!-- LOGO -->
+<header class="site-header">
+  <img class="logo"
+       src="logo.png?v=7"
+       alt="Royal Kids Montgermont"
+       onerror="this.onerror=null;this.src='LOGO-RK-AVEC-MONTGERMONT-BLANC-montgermont-25.08.19.png?v=7'">
+</header>
+
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="pill">
+    Réservations en cours
+    <span class="dots"><i></i><i></i><i></i></span>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="container hero">
+  <div class="hero-box">
+    <h1>Offrez-lui un anniversaire inoubliable<br>Royal Kids Montgermont</h1>
+    <p>Jeux géants, gâteau et boissons inclus — et selon la formule : <b>repas, animateur, parade avec Léon</b>. Réservez en 1 minute.</p>
+    <a class="cta-main" href="#dispos">📅 Voir les disponibilités</a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section-title" id="formules">
+    <h2>Nos formules</h2>
+    <p>Minimum 8 enfants • Chaussettes obligatoires</p>
+  </section>
+
+<!-- VIDEO -->
+<section class="container" style="margin:40px auto;text-align:center">
+  <iframe width="100%" height="480"
+    src="https://www.youtube.com/embed/AbCdEfGh"
+    title="Vidéo Royal Kids Montgermont"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</section>
+
+
+  <!-- CTA “Voir les dispo” sous les 3 cartes -->
+  <a id="dispos" class="btn secondary btn-wide" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires" target="_blank" rel="noopener">Voir les disponibilités</a>
+
+  <!-- Photos -->
+  <section class="grid-photos" aria-label="Aperçu Royal Kids">
+    <img src="toboggan.jpg" alt="Jeux géants" />
+    <img src="leon-enfants.jpg" alt="Léon la mascotte" />
+    <img src="piscine-balles.jpg" alt="Piscine à balles" />
+  </section> <section class="plans">
+  <!-- Classic -->
+  <article class="card card--classic">
+    <h3>Classic</h3>
+    <p class="muted">Durée 2h</p>
+
+    <div class="price-wrap">
+      <div class="price-burst">
+        <span class="amount">14,90€</span>
+        <span class="per">/ enfant</span>
+        <span class="tag">Prix mini</span>
+      </div>
+    </div>
+
+    <ul class="features">
+      <li><span class="dot">✓</span> Entrée <b>offerte</b> à l’enfant fêté (hors formule)</li>
+      <li><span class="dot">✓</span> Accès illimité aux jeux (hors jetons moto)</li>
+      <li><span class="dot">✓</span> Cartons d’invitation</li>
+      <li><span class="dot">✓</span> Gâteau d’anniversaire</li>
+      <li><span class="dot">✓</span> Boissons (sirop, eau) + friandises</li>
+      <li><span class="dot">✓</span> Certificat d’anniversaire</li>
+    </ul>
+
+   <a class="btn" target="_blank" rel="noopener"
+   href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires/formule-classic?lang=fr">
+  Réserver — Classic
+</a>
+</article>
+
+  <!-- Royale (PRIMAIRE) -->
+  <article class="card card--royale" style="overflow:visible">
+    <img class="best-badge" src="badge.png?v=3" alt="Best seller">
+    <h3>Royale</h3>
+    <p class="muted">Durée 3h</p>
+
+    <div class="price-wrap">
+      <div class="price-burst">
+        <span class="amount">24,90€</span>
+        <span class="per">/ enfant</span>
+        <span class="tag">Top choix</span>
+      </div>
+    </div>
+
+    <ul class="features">
+      <!-- On enlève toute mention “repas” ici -->
+      <li><span class="dot">✓</span> <b>Animateur</b> dédié & parade avec Léon</li>
+      <li><span class="dot">✓</span> <b>Pochette surprise</b> pour chaque enfant</li>
+      <li><span class="dot">✓</span> + <b>1 tour de moto</b> par enfant</li>
+      <li><span class="dot">✓</span> <b>Photo de groupe offerte</b> avec Léon</li>
+      <li><span class="dot">✓</span> Accès illimité aux jeux (hors jetons moto)</li>
+      <li><span class="dot">✓</span> Gâteau, boissons & friandises</li>
+    </ul>
+
+   <a class="btn" target="_blank" rel="noopener"
+   href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires/formule-royale?lang=fr">
+  RÉSERVER — ROYALE (RECOMMANDÉE)
+</a>
+ </article>
+
+  <!-- Happy Snack -->
+  <article class="card card--snack">
+    <h3>Happy Snack <span class="muted">Repas inclus</span></h3>
+    <p class="muted">Durée 3h</p>
+
+    <div class="price-wrap">
+      <div class="price-burst">
+        <span class="amount">17,90€</span>
+        <span class="per">/ enfant</span>
+        <span class="tag">Repas</span>
+      </div>
+    </div>
+
+    <ul class="features">
+      <li><span class="dot">✓</span> Tous les avantages <b>Classic</b></li>
+      <li><span class="dot">✓</span> Boissons (coca, oasis, sirop, eau)</li>
+      <li><span class="dot">✓</span> <b>Repas d’anniversaire</b></li>
+    </ul>
+
+    <a class="btn" target="_blank" rel="noopener"
+   href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires/formule-happy-snack?lang=fr">
+  Réserver — Happy Snack
+</a>
+ </article>
+</section>
+
+  <!-- Avis clients -->
+  <section class="reviews">
+    <h2>Ils ont fêté chez nous 🎉</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Formule Royale parfaite, l’animateur a géré de A à Z. Les enfants ont adoré la parade avec Léon !</p>
+        <div class="who">Laura</div>
+        <div class="when">Avis Google • juin 2025</div>
+      </article>
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Très propre et sécurisé, gâteau excellent. Merci l’équipe !</p>
+        <div class="who">Damien</div>
+        <div class="when">Avis Google • mai 2025</div>
+      </article>
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Organisation top, enfants ravis, on reviendra. Mention spéciale aux animateurs !</p>
+        <div class="who">Sophie</div>
+        <div class="when">Avis Google • avril 2025</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ complète -->
+  <section id="faq" class="faq-section">
+  <h2>❓ Foire aux questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      Peut-on venir sans faire un anniversaire ?
+    </button>
+    <div class="faq-answer" hidden>
+      Oui 👍 Le parc est ouvert au public pour le <b>jeu libre</b> pendant nos horaires d’ouverture.
+      Vous achetez simplement une entrée classique et les enfants profitent des jeux (hors jetons moto).
+      Et si l’envie vous prend sur place, vous pourrez <b>réserver une formule</b> selon les disponibilités du jour.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      Combien d’adultes sont inclus ?
+    </button>
+    <div class="faq-answer" hidden>
+      <b>2 adultes accompagnateurs sont gratuits.</b> À partir du <b>3ᵉ adulte</b>, le tarif est de
+      <b>2 € / adulte supplémentaire</b> — que ce soit pour les <b>anniversaires</b> ou pour l’<b>entrée libre</b>.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      Faut-il apporter un gâteau ?
+    </button>
+    <div class="faq-answer" hidden>
+      Non, il est inclus dans toutes nos formules.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      À partir de quel âge ?
+    </button>
+    <div class="faq-answer" hidden>
+      Nos anniversaires sont adaptés dès 3 ans.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      Les chaussettes sont-elles obligatoires ?
+    </button>
+    <div class="faq-answer" hidden>
+      Oui, pour les enfants et les adultes.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      Peut-on ajouter des options ?
+    </button>
+    <div class="faq-answer" hidden>
+      Oui : réalité virtuelle, pochettes surprises, photo de groupe, etc.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      Peut-on inviter des adultes supplémentaires ?
+    </button>
+    <div class="faq-answer" hidden>
+      Oui, sur toutes les formules. <b>Tarif : 2 € par adulte supplémentaire</b>.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button" aria-expanded="false">
+      Fournissez-vous des bonbons sans gélatine ?
+    </button>
+    <div class="faq-answer" hidden>
+      Oui, sur simple demande lors de la réservation.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © Royal Kids Montgermont • Anniversaires & loisirs pour enfants
+</footer>
+
+<script>
+  // Accordéon FAQ
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+      btn.setAttribute('aria-expanded', String(!expanded));
+
+      if (expanded) {
+        answer.hidden = true;
+        item.classList.remove('active');
+      } else {
+        answer.hidden = false;
+        item.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
