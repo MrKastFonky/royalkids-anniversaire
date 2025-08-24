@@ -187,7 +187,7 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9}
   </div>
 </header>
 
-<!-- VIDEO 9/16 -->
+<!-- VIDEO 9/16 (autoplay + mute + loop) -->
 <section class="video-section">
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/Q10c1QKRvHM?autoplay=1&mute=1&loop=1&playlist=Q10c1QKRvHM"
@@ -198,7 +198,157 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9}
 </section>
 
 <main class="container">
-  <!-- ... le reste de ton contenu inchangé ... -->
+  <section class="section-title" id="formules">
+    <h2>Nos formules</h2>
+    <p>Minimum 8 enfants • Chaussettes obligatoires</p>
+  </section>
+
+  <section class="plans">
+    <!-- Classic -->
+    <article class="card">
+      <h3>Classic</h3>
+      <p class="muted">Durée 2h</p>
+
+      <div class="price-wrap">
+        <div class="price-burst">
+          <span class="amount">14,90€</span>
+          <span class="per">/ enfant</span>
+          <span class="tag">Prix mini</span>
+        </div>
+      </div>
+
+      <ul class="features">
+        <li><span class="dot">✓</span> Entrée <b>offerte</b> à l’enfant fêté (hors formule)</li>
+        <li><span class="dot">✓</span> Accès illimité aux jeux (hors jetons moto)</li>
+        <li><span class="dot">✓</span> Cartons d’invitation</li>
+        <li><span class="dot">✓</span> Gâteau d’anniversaire</li>
+        <li><span class="dot">✓</span> Boissons (sirop, eau) + friandises</li>
+        <li><span class="dot">✓</span> Certificat d’anniversaire</li>
+      </ul>
+
+      <a class="btn" href="#dispos">Réserver</a>
+    </article>
+
+    <!-- Happy Snack -->
+    <article class="card">
+      <h3>Happy Snack <span class="muted">Repas inclus</span></h3>
+      <p class="muted">Durée 3h</p>
+
+      <div class="price-wrap">
+        <div class="price-burst">
+          <span class="amount">17,90€</span>
+          <span class="per">/ enfant</span>
+          <span class="tag">Repas</span>
+        </div>
+      </div>
+
+      <ul class="features">
+        <li><span class="dot">✓</span> Tous les avantages <b>Classic</b></li>
+        <li><span class="dot">✓</span> Boissons (coca, oasis, sirop, eau)</li>
+        <li><span class="dot">✓</span> <b>Repas d’anniversaire</b></li>
+      </ul>
+
+      <a class="btn" href="#dispos">Réserver</a>
+    </article>
+
+    <!-- Royale -->
+    <article class="card">
+      <img class="best-badge" src="badge.png?v=3" alt="Best seller">
+      <h3>Royale</h3>
+      <p class="muted">Durée 3h</p>
+
+      <div class="price-wrap">
+        <div class="price-burst">
+          <span class="amount">24,90€</span>
+          <span class="per">/ enfant</span>
+          <span class="tag">Top choix</span>
+        </div>
+      </div>
+
+      <ul class="features">
+        <li><span class="dot">✓</span> Tous les avantages <b>Happy Snack</b></li>
+        <li><span class="dot">✓</span> <b>Animateur</b> dédié & parade avec Léon</li>
+        <li><span class="dot">✓</span> <b>Pochette surprise</b> pour chaque enfant</li>
+        <li><span class="dot">✓</span> + <b>1 tour de moto</b> par enfant</li>
+        <li><span class="dot">✓</span> <b>Photo de groupe offerte</b> avec Léon</li>
+      </ul>
+
+      <a class="btn" href="#dispos">Réserver</a>
+    </article>
+  </section>
+
+  <!-- CTA “Voir les dispo” sous les 3 cartes -->
+  <a id="dispos" class="btn secondary btn-wide" href="https://royalkids-montgermont.qweekle.com/shop/royal-kids-montgermont/anniversaires" target="_blank" rel="noopener">Voir les disponibilités</a>
+
+  <!-- Photos -->
+  <section class="grid-photos" aria-label="Aperçu Royal Kids">
+    <img src="toboggan.jpg" alt="Jeux géants" />
+    <img src="leon-enfants.jpg" alt="Léon la mascotte" />
+    <img src="piscine-balles.jpg" alt="Piscine à balles" />
+  </section>
+
+  <!-- Avis clients -->
+  <section class="reviews">
+    <h2>Ils ont fêté chez nous 🎉</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Formule Royale parfaite, l’animateur a géré de A à Z. Les enfants ont adoré la parade avec Léon !</p>
+        <div class="who">Laura</div>
+        <div class="when">Avis Google • juin 2025</div>
+      </article>
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Très propre et sécurisé, gâteau excellent. Merci l’équipe !</p>
+        <div class="who">Damien</div>
+        <div class="when">Avis Google • mai 2025</div>
+      </article>
+      <article class="review">
+        <div class="stars">★★★★★</div>
+        <p>Organisation top, enfants ravis, on reviendra. Mention spéciale aux animateurs !</p>
+        <div class="who">Sophie</div>
+        <div class="when">Avis Google • avril 2025</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ en cartes -->
+  <section class="faq-box" id="faq">
+    <h2>❓ Foire aux questions</h2>
+    <ul class="faq">
+      <li><strong>Peut-on venir sans faire un anniversaire ?</strong><br>
+        Oui 👍 Le parc est ouvert au public pour le <b>jeu libre</b> pendant nos horaires d’ouverture. Vous achetez simplement une entrée classique et les enfants profitent des jeux (hors jetons moto). Et si l’envie vous prend sur place, vous pourrez <b>réserver une formule</b> selon les disponibilités du jour.
+      </li>
+
+      <li><strong>Combien d’adultes sont inclus ?</strong><br>
+        <b>2 adultes accompagnateurs sont gratuits.</b> À partir du <b>3ᵉ adulte</b>, le tarif est de <b>2 € / adulte supplémentaire</b> — que ce soit pour les <b>anniversaires</b> ou pour l’<b>entrée libre</b>.
+      </li>
+
+      <li><strong>Faut-il apporter un gâteau ?</strong><br>
+        Non, il est inclus dans toutes nos formules.
+      </li>
+
+      <li><strong>À partir de quel âge ?</strong><br>
+        Nos anniversaires sont adaptés dès 3 ans.
+      </li>
+
+      <li><strong>Les chaussettes sont-elles obligatoires ?</strong><br>
+        Oui, pour les enfants et les adultes.
+      </li>
+
+      <li><strong>Peut-on ajouter des options ?</strong><br>
+        Oui : réalité virtuelle, pochettes surprises, photo de groupe, etc.
+      </li>
+
+      <li><strong>Peut-on inviter des adultes supplémentaires ?</strong><br>
+        Oui, sur toutes les formules. <b>Tarif : 2 € par adulte supplémentaire</b>.
+      </li>
+
+      <li><strong>Fournissez-vous des bonbons sans gélatine ?</strong><br>
+        Oui, sur simple demande lors de la réservation.
+      </li>
+    </ul>
+  </section>
 </main>
 
 <footer>
