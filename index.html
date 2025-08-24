@@ -217,6 +217,16 @@ footer{color:#fff;text-align:center;padding:28px 0 38px;opacity:.9} /* --- FAQ a
   margin:6px 0 18px;  /* 6px au-dessus, 18px dessous */
   opacity:.95;
 }
+/* --- Fix espace sous le titre "Nos formules" --- */
+.section-title{ margin-bottom: 22px; }          /* espace global sous le bloc titre */
+.section-title h2{ margin: 0 0 6px; }           /* petit espace entre H2 et le sous-titre */
+.section-title p{ margin: 0; }                  /* pas de marge parasite */
+
+/* sécurité : on force un petit espace avant les cartes */
+.plans{ margin-top: 18px; }
+
+/* au cas où une marge négative traîne sur les cartes (rare) */
+.card{ margin-top: 0; }
 
 </style>
 </head>
